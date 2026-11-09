@@ -1,0 +1,17 @@
+ELECTRICAL INSTALLATION CONDITION REPORT
+
+Installation: Flat 5C, 22 Canal Street, London E2 8QR
+Client: Harbourline Property Fund I LP
+Inspector: Brightspark Electrical
+
+Date of inspection: 20 August 2024
+Next inspection recommended by: 20 August 2029
+
+Overall assessment of the installation: Unsatisfactory
+
+Observations and classification
+1. Socket circuits in the kitchen have no RCD protection. Code C2.
+2. Consumer unit label missing. Code C3.
+
+Code C1: danger present. Code C2: potentially dangerous.
+Remedial work for C1 or C2 must be done within 28 days of the inspection.

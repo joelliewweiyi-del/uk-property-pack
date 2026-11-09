@@ -1,0 +1,19 @@
+LANDLORD GAS SAFETY RECORD
+
+Record number: WH-26-03-0102
+Address: Flat 5C, 22 Canal Street, London E2 8QR
+Landlord: Harbourline Property Fund I LP
+Tenant: Leo Fischer
+
+Engineer: Warmline Heating, registered gas engineer no. 512834
+Date of inspection: 2 March 2026
+Next safety check due by: 1 March 2027
+
+Appliance                 Location     Result
+Combi boiler              Hallway      Pass
+Gas fire                  Lounge       Not to current standards, advised
+
+Gas tightness test: Pass
+Emergency control valve accessible: Yes
+
+A copy of this record must be given to the tenant within 28 days of the check.

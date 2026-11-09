@@ -1,0 +1,16 @@
+{
+  "name": "uk-property-pack",
+  "version": "1.0.0",
+  "description": "Synthetic UK property documents, mail and registers with planted errors, plus a quote checker, for testing document and back-office agents.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

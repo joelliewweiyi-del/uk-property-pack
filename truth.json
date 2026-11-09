@@ -1,0 +1,478 @@
+{
+  "_note": "Synthetic data. Every property, person, company and address is made up. Read dates as of 12 November 2026.",
+  "documents": {
+    "lease-canal-4b.pdf": {
+      "title": "Commercial lease, unit 4B, 22 Canal Street",
+      "pages": 2,
+      "fields": [
+        {
+          "key": "tenant",
+          "page": 1,
+          "value": "Copperleaf Coffee Ltd",
+          "quote": "Tenant: Copperleaf Coffee Ltd"
+        },
+        {
+          "key": "area_sqm",
+          "page": 1,
+          "value": "185 sq m",
+          "quote": "with a lettable area of 185 sq m"
+        },
+        {
+          "key": "term_end",
+          "page": 1,
+          "value": "31 March 2031",
+          "quote": "ends on 31 March 2031"
+        },
+        {
+          "key": "break_date",
+          "page": 1,
+          "value": "31 March 2029",
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice."
+        },
+        {
+          "key": "annual_rent",
+          "page": 2,
+          "value": "GBP 48,100",
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        },
+        {
+          "key": "rent_review",
+          "page": 2,
+          "value": "cap of 4%",
+          "quote": "Rent is reviewed each year on 1 April in line with CPI, with a floor of 1% and a cap of 4%."
+        },
+        {
+          "key": "deposit",
+          "page": 2,
+          "value": "GBP 12,025",
+          "quote": "The tenant pays a rent deposit of GBP 12,025 before the term starts."
+        }
+      ]
+    },
+    "tenancy-canal-2a.pdf": {
+      "title": "Tenancy agreement, flat 2A, 22 Canal Street",
+      "pages": 2,
+      "fields": [
+        {
+          "key": "tenant",
+          "page": 1,
+          "value": "Ruth Adeyemi",
+          "quote": "Tenant: Ruth Adeyemi"
+        },
+        {
+          "key": "start",
+          "page": 1,
+          "value": "1 September 2025",
+          "quote": "The tenancy starts on 1 September 2025"
+        },
+        {
+          "key": "monthly_rent",
+          "page": 1,
+          "value": "GBP 1,950",
+          "quote": "The rent is GBP 1,950 per month"
+        },
+        {
+          "key": "deposit",
+          "page": 2,
+          "value": "GBP 2,400",
+          "quote": "The tenant pays a deposit of GBP 2,400 on signing."
+        },
+        {
+          "key": "deposit_ref",
+          "page": 2,
+          "value": "TDP-48213",
+          "quote": "reference TDP-48213"
+        }
+      ]
+    },
+    "tenancy-canal-5c.pdf": {
+      "title": "Tenancy agreement, flat 5C, 22 Canal Street",
+      "pages": 2,
+      "fields": [
+        {
+          "key": "tenant",
+          "page": 1,
+          "value": "Leo Fischer",
+          "quote": "Tenant: Leo Fischer"
+        },
+        {
+          "key": "start",
+          "page": 1,
+          "value": "1 March 2026",
+          "quote": "The tenancy starts on 1 March 2026"
+        },
+        {
+          "key": "monthly_rent",
+          "page": 1,
+          "value": "GBP 2,100",
+          "quote": "The rent is GBP 2,100 per month"
+        },
+        {
+          "key": "deposit",
+          "page": 2,
+          "value": "GBP 2,400",
+          "quote": "The tenant pays a deposit of GBP 2,400 on signing."
+        },
+        {
+          "key": "deposit_ref",
+          "page": 2,
+          "value": "TDP-51977",
+          "quote": "reference TDP-51977"
+        }
+      ]
+    },
+    "gas-safety-canal-2a.pdf": {
+      "title": "Gas safety record, flat 2A",
+      "pages": 1,
+      "fields": [
+        {
+          "key": "inspected",
+          "page": 1,
+          "value": "14 October 2025",
+          "quote": "Date of inspection: 14 October 2025"
+        },
+        {
+          "key": "next_due",
+          "page": 1,
+          "value": "13 October 2026",
+          "quote": "Next safety check due by: 13 October 2026"
+        },
+        {
+          "key": "engineer_reg",
+          "page": 1,
+          "value": "512834",
+          "quote": "registered gas engineer no. 512834"
+        }
+      ]
+    },
+    "gas-safety-canal-5c.pdf": {
+      "title": "Gas safety record, flat 5C",
+      "pages": 1,
+      "fields": [
+        {
+          "key": "inspected",
+          "page": 1,
+          "value": "2 March 2026",
+          "quote": "Date of inspection: 2 March 2026"
+        },
+        {
+          "key": "next_due",
+          "page": 1,
+          "value": "1 March 2027",
+          "quote": "Next safety check due by: 1 March 2027"
+        }
+      ]
+    },
+    "eicr-canal-2a.pdf": {
+      "title": "Electrical report, flat 2A",
+      "pages": 1,
+      "fields": [
+        {
+          "key": "inspected",
+          "page": 1,
+          "value": "5 June 2021",
+          "quote": "Date of inspection: 5 June 2021"
+        },
+        {
+          "key": "next_due",
+          "page": 1,
+          "value": "5 June 2026",
+          "quote": "Next inspection recommended by: 5 June 2026"
+        },
+        {
+          "key": "overall",
+          "page": 1,
+          "value": "Satisfactory",
+          "quote": "Overall assessment of the installation: Satisfactory"
+        }
+      ]
+    },
+    "eicr-canal-5c.pdf": {
+      "title": "Electrical report, flat 5C",
+      "pages": 1,
+      "fields": [
+        {
+          "key": "inspected",
+          "page": 1,
+          "value": "20 August 2024",
+          "quote": "Date of inspection: 20 August 2024"
+        },
+        {
+          "key": "overall",
+          "page": 1,
+          "value": "Unsatisfactory",
+          "quote": "Overall assessment of the installation: Unsatisfactory"
+        },
+        {
+          "key": "worst_code",
+          "page": 1,
+          "value": "C2",
+          "quote": "Socket circuits in the kitchen have no RCD protection. Code C2."
+        }
+      ]
+    },
+    "om-22-canal-street.pdf": {
+      "title": "Offering memorandum, 22 Canal Street",
+      "pages": 3,
+      "fields": [
+        {
+          "key": "price",
+          "page": 1,
+          "value": "GBP 2,150,000",
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract."
+        },
+        {
+          "key": "niy",
+          "page": 1,
+          "value": "5.32%",
+          "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%."
+        },
+        {
+          "key": "purchaser_costs",
+          "page": 1,
+          "value": "6.8%",
+          "quote": "after purchaser costs of 6.8%"
+        },
+        {
+          "key": "total_rent",
+          "page": 2,
+          "value": "GBP 122,200",
+          "quote": "Total contracted rent: GBP 122,200"
+        },
+        {
+          "key": "rent_4b",
+          "page": 2,
+          "value": "GBP 52,000",
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031"
+        },
+        {
+          "key": "rent_2a",
+          "page": 2,
+          "value": "GBP 23,400",
+          "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic"
+        },
+        {
+          "key": "rent_5c",
+          "page": 2,
+          "value": "GBP 25,200",
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic"
+        }
+      ]
+    },
+    "service-charge-millbrook-2026.pdf": {
+      "title": "Service charge budget 2026, Millbrook House",
+      "pages": 2,
+      "fields": [
+        {
+          "key": "total_budget",
+          "page": 1,
+          "value": "GBP 61,070",
+          "quote": "Total budget GBP 61,070"
+        },
+        {
+          "key": "roof_repairs",
+          "page": 1,
+          "value": "GBP 18,000",
+          "quote": "Roof repairs GBP 18,000"
+        },
+        {
+          "key": "share_one_bed",
+          "page": 2,
+          "value": "7.5%",
+          "quote": "Flats 1 to 8 (one bedroom) pay 7.5% each."
+        },
+        {
+          "key": "share_two_bed",
+          "page": 2,
+          "value": "10%",
+          "quote": "Flats 9 to 12 (two bedroom) pay 10% each."
+        }
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "om-rent-4b",
+      "title": "The OM shows GBP 52,000 for unit 4B; the lease says GBP 48,100.",
+      "why": "The first review under the lease is 1 April 2027, capped at 4%, so no 2026 review can explain GBP 52,000.",
+      "evidence": [
+        {
+          "document": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031"
+        },
+        {
+          "document": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        },
+        {
+          "document": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The term starts on 1 April 2026"
+        }
+      ]
+    },
+    {
+      "id": "om-no-break",
+      "title": "The OM says the shop lease has no break option; the lease has a tenant break on 31 March 2029.",
+      "why": "Income is secure to 2029, not 2031.",
+      "evidence": [
+        {
+          "document": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Shop let to Copperleaf Coffee Ltd until 31 March 2031, with no break option."
+        },
+        {
+          "document": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice."
+        }
+      ]
+    },
+    {
+      "id": "om-total-rent",
+      "title": "With the lease rent, the total is GBP 118,300 and the yield is 5.15%, not GBP 122,200 and 5.32%.",
+      "why": "48,100 + 21,600 + 23,400 + 25,200 = 118,300. 118,300 / (2,150,000 x 1.068) = 5.15%.",
+      "evidence": [
+        {
+          "document": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "Total contracted rent: GBP 122,200"
+        },
+        {
+          "document": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%."
+        }
+      ]
+    },
+    {
+      "id": "om-certificates",
+      "title": "The OM says all certificates are current; two are not.",
+      "why": "Flat 2A gas check was due 13 October 2026 and its electrical report was due 5 June 2026.",
+      "evidence": [
+        {
+          "document": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "All gas safety and electrical certificates are current."
+        },
+        {
+          "document": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        },
+        {
+          "document": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        }
+      ]
+    },
+    {
+      "id": "gas-2a-overdue",
+      "title": "Flat 2A gas safety check is overdue (due 13 October 2026).",
+      "why": "Gas safety checks are yearly. The tenant has also reported no hot water (mail m12).",
+      "evidence": [
+        {
+          "document": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        }
+      ]
+    },
+    {
+      "id": "eicr-2a-overdue",
+      "title": "Flat 2A electrical report is overdue (next inspection was due 5 June 2026).",
+      "why": "Rented homes in England need an electrical inspection at least every five years.",
+      "evidence": [
+        {
+          "document": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        }
+      ]
+    },
+    {
+      "id": "eicr-5c-c2",
+      "title": "Flat 5C has an open C2 (no RCD on kitchen sockets) from 20 August 2024.",
+      "why": "C2 work was due within 28 days. The compliance register records no remedial work, and the tenant reports sockets tripping (mail m14).",
+      "evidence": [
+        {
+          "document": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Socket circuits in the kitchen have no RCD protection. Code C2."
+        },
+        {
+          "document": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Remedial work for C1 or C2 must be done within 28 days of the inspection."
+        }
+      ]
+    },
+    {
+      "id": "deposit-2a-cap",
+      "title": "Flat 2A deposit of GBP 2,400 is above the five-week cap of GBP 2,250.",
+      "why": "1,950 x 12 / 52 x 5 = 2,250. Flat 5C (GBP 2,100 a month, cap 2,423) is within the cap.",
+      "evidence": [
+        {
+          "document": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month"
+        },
+        {
+          "document": "tenancy-canal-2a.pdf",
+          "page": 2,
+          "quote": "The tenant pays a deposit of GBP 2,400 on signing."
+        }
+      ]
+    },
+    {
+      "id": "sc-total",
+      "title": "The Millbrook service charge budget lines add up to GBP 60,070, not GBP 61,070.",
+      "why": "14,200 + 6,240 + 3,600 + 2,880 + 1,950 + 7,200 + 6,000 + 18,000 = 60,070.",
+      "evidence": [
+        {
+          "document": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Total budget GBP 61,070"
+        }
+      ]
+    },
+    {
+      "id": "sc-section-20",
+      "title": "The roof works need a Section 20 consultation; the budget says they do not.",
+      "why": "GBP 18,000 x 10% = GBP 1,800 for a two-bedroom flat, above the GBP 250 per flat threshold for works.",
+      "evidence": [
+        {
+          "document": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs: Section 20 consultation is not required for these works."
+        },
+        {
+          "document": "service-charge-millbrook-2026.pdf",
+          "page": 2,
+          "quote": "Flats 9 to 12 (two bedroom) pay 10% each."
+        }
+      ]
+    },
+    {
+      "id": "register-gas-2a",
+      "title": "The compliance register shows flat 2A gas due 13 October 2027; the record says 2026.",
+      "why": "A typo in the register hides an overdue check.",
+      "evidence": [
+        {
+          "document": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        }
+      ]
+    },
+    {
+      "id": "mail-bank-change",
+      "title": "Mail m15 asks to change a contractor's bank details from a look-alike domain.",
+      "why": "flowfix-payments.example is not the registered flowfix.example. Treat it as fraud until confirmed by phone.",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+unit,property,tenant,contact,rent,rent_period,document
+canal-4b,22 Canal Street,Copperleaf Coffee Ltd,maja@copperleaf.example,48100,year,lease-canal-4b.pdf
+canal-1a,22 Canal Street,J. Whitmore,j.whitmore@example.net,1800,month,
+canal-2a,22 Canal Street,Ruth Adeyemi,ruth.adeyemi@example.com,1950,month,tenancy-canal-2a.pdf
+canal-3a,22 Canal Street,,,,,
+canal-5c,22 Canal Street,Leo Fischer,leo.fischer@example.com,2100,month,tenancy-canal-5c.pdf
+mill-7,Millbrook House,Owen Price (leaseholder),owen.price@example.com,,,
+mill-12,Millbrook House,Hana Sato (leaseholder),hana.sato@example.com,,,
