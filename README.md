@@ -15,8 +15,9 @@ Every person, company, address and number is made up. Read the dates as of **12 
 | `mail/inbox.json` | 12 mails to the property manager: repairs, a service charge dispute, a buyer's surveyor, a notice to leave, a bank-detail change |
 | `registers/` | Units, compliance dates and contractors, as CSV |
 | `truth.json` | Every field with its page and quote, and the planted issues with the quotes that prove them |
-| `check/` | The checkers (Python 3, standard library): `check_quotes.py` for fields, `trace_check.py` for figures against their sources, `score.py` for findings against the planted issues |
-| `examples/` | A claims file and a findings file to run the checkers on |
+| `briefs.json` | Two briefs (data room in, IC memo out; PM report in, AM update out) with the figures and issues a good output must have |
+| `check/` | The checkers (Python 3, standard library): `check_quotes.py` for fields, `trace_check.py` for figures against their sources, `score.py` for findings against the planted issues, `score_brief.py` for a whole output against a brief |
+| `examples/` | A claims file, a findings file and one output per brief to run the checkers on |
 | `skill/` | Grok Bot skills: "Extract with quote" and "Trace every figure" |
 
 Two buildings: **22 Canal Street** (a shop and four flats, owned by a fund that is selling it, with the vendor's memo, rent roll and the managing agent's Q3 report) and **Millbrook House** (a block of 12 leasehold flats with a managing agent). The same names appear in [doc-trace](https://github.com/joelliewweiyi-del/doc-trace) and [work-order-agent](https://github.com/joelliewweiyi-del/work-order-agent).
@@ -59,6 +60,17 @@ A mismatch is a finding. A rejected quote is an error (exit code 1).
 python3 check/score.py . examples/findings-sample.json
 caught 3/15, 1 unmatched, 0 rejected
 ```
+
+## Scoring a brief
+
+`briefs.json` holds the two briefs we expect: **ic-memo** (write the investment committee memo from the data room) and **am-update** (write the asset manager's quarterly update from the property manager's report). Each lists the figures a good output states and the planted issues it flags. `score_brief.py` scores one output: a figure counts when its sources are on their pages, give that value, and match the answer key. A memo that copies the broker's GBP 52,000 is traced, and still wrong.
+
+```sh
+python3 check/score_brief.py . ic-memo examples/output-ic-memo.json
+figures 12/12 right and traced, issues 0/9 caught, 0 rejected
+```
+
+The example outputs hold figures only, so they catch no issues. Add `findings` in the format of `score.py`.
 
 ## The planted issues
 

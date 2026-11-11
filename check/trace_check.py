@@ -71,9 +71,10 @@ def check_quote(docs, ref):
     return None if status == "traced" else f'{ref.get("doc")}: {reason}'
 
 
-def judge(docs, c):
+def judge(docs, c, trace_claim=True):
+    # trace_claim=False when the claim is the agent's own figure (a memo it writes), with no page to quote.
     claim, sources, kind = c.get("claim", {}), c.get("sources", []), c.get("check", "equal")
-    for ref in [claim, *sources]:
+    for ref in ([claim] if trace_claim else []) + sources:
         problem = check_quote(docs, ref)
         if problem:
             return "!", problem

@@ -1,0 +1,122 @@
+{
+  "_note": "Example output for the am-update brief: the figures only. Score: python3 check/score_brief.py . am-update examples/output-am-update.json",
+  "figures": [
+    {
+      "key": "rent_demanded",
+      "value": "GBP 29,575",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575",
+          "value": "GBP 29,575"
+        }
+      ]
+    },
+    {
+      "key": "rent_collected",
+      "value": "GBP 27,625",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625",
+          "value": "GBP 27,625"
+        }
+      ]
+    },
+    {
+      "key": "collection_rate",
+      "value": "93.4%",
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625",
+          "value": "GBP 27,625"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575",
+          "value": "GBP 29,575"
+        }
+      ]
+    },
+    {
+      "key": "arrears_q3",
+      "value": "GBP 1,950",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent).",
+          "value": "GBP 1,950"
+        }
+      ]
+    },
+    {
+      "key": "arrears_now",
+      "value": "GBP 3,900",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi GBP 3,900 (September and October rent)",
+          "value": "GBP 3,900"
+        }
+      ]
+    },
+    {
+      "key": "repairs_budget",
+      "value": "GBP 6,000",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000",
+          "value": "GBP 6,000"
+        }
+      ]
+    },
+    {
+      "key": "repairs_spent",
+      "value": "GBP 5,250",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250",
+          "value": "GBP 5,250"
+        }
+      ]
+    },
+    {
+      "key": "repairs_pct",
+      "value": "87.5%",
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250",
+          "value": "GBP 5,250"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000",
+          "value": "GBP 6,000"
+        }
+      ]
+    }
+  ],
+  "findings": []
+}

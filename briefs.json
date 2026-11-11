@@ -1,0 +1,41 @@
+{
+  "_note": "The two hackathon briefs we expect, with the answer key: the figures a good output must state, and the planted issues it must flag. Score an output with check/score_brief.py.",
+  "briefs": [
+    {
+      "id": "ic-memo",
+      "title": "Data room in, IC memo out",
+      "task": "Write the investment committee memo for 22 Canal Street from the data room (pdf/, registers/, mail/). Every figure links to the page and quote it comes from. Where documents disagree, show both sides and the price effect. Treat the vendor's offering memorandum as a claim to test, not as a source of truth.",
+      "figures": [
+        { "key": "rent_4b", "label": "Unit 4B rent per year", "value": "GBP 48,100" },
+        { "key": "rent_1a", "label": "Flat 1A rent per year", "value": "GBP 21,600" },
+        { "key": "rent_2a", "label": "Flat 2A rent per year", "value": "GBP 23,400" },
+        { "key": "rent_5c", "label": "Flat 5C rent per year", "value": "GBP 25,200" },
+        { "key": "total_rent", "label": "Total passing rent", "value": "GBP 118,300" },
+        { "key": "price", "label": "Asking price", "value": "GBP 2,150,000" },
+        { "key": "purchaser_costs", "label": "Purchaser costs", "value": "6.8%" },
+        { "key": "niy", "label": "Net initial yield on passing rent, after costs", "value": "5.15%" },
+        { "key": "lease_end_4b", "label": "Unit 4B lease end", "value": "31 March 2031" },
+        { "key": "break_4b", "label": "Unit 4B tenant break", "value": "31 March 2029" },
+        { "key": "next_review_4b", "label": "Unit 4B next rent review", "value": "1 April 2027" },
+        { "key": "arrears_2a", "label": "Flat 2A arrears at 1 November 2026", "value": "GBP 3,900" }
+      ],
+      "issues": ["om-rent-4b", "om-total-rent", "om-no-break", "om-certificates", "gas-2a-overdue", "eicr-2a-overdue", "eicr-5c-c2", "deposit-2a-cap", "register-gas-2a"]
+    },
+    {
+      "id": "am-update",
+      "title": "PM report in, AM update out",
+      "task": "Write the asset manager's Q3 2026 update for 22 Canal Street from the property manager's quarterly report, checked against the rent roll, the certificates, the registers and the mail. Every figure traced. List the actions, each with a drafted mail that is not sent.",
+      "figures": [
+        { "key": "rent_demanded", "label": "Rent demanded in Q3", "value": "GBP 29,575" },
+        { "key": "rent_collected", "label": "Rent collected in Q3", "value": "GBP 27,625" },
+        { "key": "collection_rate", "label": "Collection rate", "value": "93.4%" },
+        { "key": "arrears_q3", "label": "Arrears at 30 September 2026", "value": "GBP 1,950" },
+        { "key": "arrears_now", "label": "Arrears at 1 November 2026", "value": "GBP 3,900" },
+        { "key": "repairs_budget", "label": "Repairs budget 2026", "value": "GBP 6,000" },
+        { "key": "repairs_spent", "label": "Repairs spent to 30 September", "value": "GBP 5,250" },
+        { "key": "repairs_pct", "label": "Share of repairs budget spent", "value": "87.5%" }
+      ],
+      "issues": ["pm-collection-rate", "pm-compliance", "pm-repairs-budget", "gas-2a-overdue", "eicr-2a-overdue", "eicr-5c-c2", "register-gas-2a", "mail-bank-change"]
+    }
+  ]
+}

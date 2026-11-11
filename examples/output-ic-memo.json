@@ -1,0 +1,191 @@
+{
+  "_note": "Example output for the ic-memo brief: the figures only, each with its sources. Score: python3 check/score_brief.py . ic-memo examples/output-ic-memo.json",
+  "figures": [
+    {
+      "key": "rent_4b",
+      "value": "GBP 48,100",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100"
+        }
+      ]
+    },
+    {
+      "key": "rent_1a",
+      "value": "GBP 21,600",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+          "value": "GBP 21,600"
+        }
+      ]
+    },
+    {
+      "key": "rent_2a",
+      "value": "GBP 23,400",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month",
+          "value": "GBP 1,950",
+          "factor": 12
+        }
+      ]
+    },
+    {
+      "key": "rent_5c",
+      "value": "GBP 25,200",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month",
+          "value": "GBP 2,100",
+          "factor": 12
+        }
+      ]
+    },
+    {
+      "key": "total_rent",
+      "value": "GBP 118,300",
+      "check": "sum",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+          "value": "GBP 21,600"
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month",
+          "value": "GBP 1,950",
+          "factor": 12
+        },
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month",
+          "value": "GBP 2,100",
+          "factor": 12
+        }
+      ]
+    },
+    {
+      "key": "price",
+      "value": "GBP 2,150,000",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000"
+        }
+      ]
+    },
+    {
+      "key": "purchaser_costs",
+      "value": "6.8%",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%.",
+          "value": "6.8%"
+        }
+      ]
+    },
+    {
+      "key": "niy",
+      "value": "5.15%",
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300",
+          "value": "GBP 118,300"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000",
+          "factor": 1.068
+        }
+      ]
+    },
+    {
+      "key": "lease_end_4b",
+      "value": "31 March 2031",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The term starts on 1 April 2026 and ends on 31 March 2031.",
+          "value": "31 March 2031"
+        }
+      ]
+    },
+    {
+      "key": "break_4b",
+      "value": "31 March 2029",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice.",
+          "value": "31 March 2029"
+        }
+      ]
+    },
+    {
+      "key": "next_review_4b",
+      "value": "1 April 2027",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%).",
+          "value": "1 April 2027"
+        }
+      ]
+    },
+    {
+      "key": "arrears_2a",
+      "value": "GBP 3,900",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi GBP 3,900 (September and October rent)",
+          "value": "GBP 3,900"
+        }
+      ]
+    }
+  ],
+  "findings": []
+}

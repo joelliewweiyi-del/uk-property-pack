@@ -146,3 +146,54 @@ test('the rent roll agrees with the leases; the quarterly report percentages sta
   assert.notEqual(Math.round((num(field(pm, 'repairs_spent')) / num(field(pm, 'repairs_budget'))) * 100), num(field(pm, 'repairs_pct')));
   assert.equal(num(field(pm, 'demanded')) - num(field(pm, 'collected')), num(field(pm, 'arrears')));
 });
+
+// The two briefs: an output scores a figure only when it is traced and right, and an issue only when it cites the proof.
+const brief = (id, data) => spawnSync(python, [join(root, 'check', 'score_brief.py'), root, id, tmpJson(data)], { encoding: 'utf8' });
+const example = (id) => JSON.parse(readFileSync(join(root, 'examples', `output-${id}.json`), 'utf8'));
+const truthFindings = (ids) => {
+  const { issues } = JSON.parse(readFileSync(join(root, 'truth.json'), 'utf8'));
+  return issues.filter((i) => ids.includes(i.id)).map((i) => ({
+    title: i.title, mail: i.mail, register: i.register,
+    evidence: i.evidence.map((e) => ({ doc: e.document, page: e.page, quote: e.quote })),
+  }));
+};
+
+test('each brief: the example figures and the planted evidence score full marks', () => {
+  const { briefs } = JSON.parse(readFileSync(join(root, 'briefs.json'), 'utf8'));
+  for (const b of briefs) {
+    const r = brief(b.id, { ...example(b.id), findings: truthFindings(b.issues) });
+    assert.equal(r.status, 0, r.stdout + r.stderr);
+    assert.match(r.stdout, new RegExp(`figures ${b.figures.length}/${b.figures.length} right and traced, issues ${b.issues.length}/${b.issues.length} caught, 0 rejected`));
+  }
+});
+
+test('an IC memo that copies the broker is traced but wrong', () => {
+  const out = example('ic-memo');
+  const rent = out.figures.find((f) => f.key === 'rent_4b');
+  rent.value = 'GBP 52,000';
+  rent.sources = [{ doc: 'om-22-canal-street.pdf', page: 2, quote: '4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031', value: 'GBP 52,000' }];
+  const r = brief('ic-memo', out);
+  assert.match(r.stdout, /✗ rent_4b .*GBP 52,000 vs expected GBP 48,100/);
+  assert.match(r.stdout, /figures 11\/12/);
+});
+
+test('a brief output loses a figure that is missing, unsourced, or not what its source says', () => {
+  const out = example('am-update');
+  out.figures = out.figures.filter((f) => f.key !== 'arrears_now');
+  out.figures.find((f) => f.key === 'repairs_budget').sources = [];
+  out.figures.find((f) => f.key === 'collection_rate').value = '100%';
+  const r = brief('am-update', out);
+  assert.equal(r.status, 0);
+  assert.match(r.stdout, /✗ arrears_now .*missing/);
+  assert.match(r.stdout, /\? repairs_budget .*no source given/);
+  assert.match(r.stdout, /✗ collection_rate .*100% vs 93\.4066%/);
+  assert.match(r.stdout, /figures 5\/8/);
+});
+
+test('a brief output with an invented source quote is rejected', () => {
+  const out = example('ic-memo');
+  out.figures[0].sources[0].quote = 'The annual rent is GBP 48,100 per year.';
+  const r = brief('ic-memo', out);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /! rent_4b /);
+});
