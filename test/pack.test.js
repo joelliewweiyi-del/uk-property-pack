@@ -197,3 +197,14 @@ test('a brief output with an invented source quote is rejected', () => {
   assert.equal(r.status, 1);
   assert.match(r.stdout, /! rent_4b /);
 });
+
+test('a source can be a register (one page) or a mail (one page per mail, in file order)', () => {
+  const out = example('am-update');
+  out.figures.find((f) => f.key === 'arrears_now').sources.push({ doc: 'units.csv', page: 1, quote: 'canal-2a,22 Canal Street,Ruth Adeyemi', value: 'Ruth Adeyemi' });
+  out.findings = [{ title: 'bank change', mail: 'm15', evidence: [{ doc: 'inbox.json', page: 6, quote: 'Please note our bank details have changed.' }] }];
+  const ok = brief('am-update', out);
+  assert.equal(ok.status, 0, ok.stdout);
+  assert.match(ok.stdout, /✓ mail-bank-change/);
+  out.findings[0].evidence[0].page = 5; // the same quote in the wrong mail
+  assert.equal(brief('am-update', out).status, 1);
+});

@@ -1,0 +1,677 @@
+{
+  "figures": [
+    {
+      "key": "rent_demanded",
+      "value": "GBP 29,575",
+      "check": "sum",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100",
+          "factor": 0.25
+        },
+        {
+          "doc": "units.csv",
+          "page": 1,
+          "quote": "canal-1a,22 Canal Street,J. Whitmore,j.whitmore@example.net,1800,month,",
+          "value": "1800",
+          "factor": 3
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950",
+          "factor": 3
+        },
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month, payable on the 1st of each month.",
+          "value": "GBP 2,100",
+          "factor": 3
+        }
+      ]
+    },
+    {
+      "key": "rent_collected",
+      "value": "GBP 27,625",
+      "check": "sum",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575",
+          "value": "GBP 29,575"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent).",
+          "value": "GBP 1,950",
+          "factor": -1
+        }
+      ]
+    },
+    {
+      "key": "collection_rate",
+      "value": "93.4%",
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625",
+          "value": "GBP 27,625"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575",
+          "value": "GBP 29,575"
+        }
+      ]
+    },
+    {
+      "key": "arrears_q3",
+      "value": "GBP 1,950",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent).",
+          "value": "GBP 1,950"
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950"
+        }
+      ]
+    },
+    {
+      "key": "arrears_now",
+      "value": "GBP 3,900",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Ruth Adeyemi GBP 3,900 (September and October rent)",
+          "value": "GBP 3,900"
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950",
+          "factor": 2
+        }
+      ]
+    },
+    {
+      "key": "repairs_budget",
+      "value": "GBP 6,000",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000",
+          "value": "GBP 6,000"
+        }
+      ]
+    },
+    {
+      "key": "repairs_spent",
+      "value": "GBP 5,250",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250",
+          "value": "GBP 5,250"
+        }
+      ]
+    },
+    {
+      "key": "repairs_pct",
+      "value": "87.5%",
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250",
+          "value": "GBP 5,250"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000",
+          "value": "GBP 6,000"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "title": "PM report states 100% collection; collected GBP 27,625 of GBP 29,575 demanded is 93.4%",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent)."
+        }
+      ]
+    },
+    {
+      "title": "Arrears have doubled since quarter end: flat 2A owes GBP 3,900 at 1 November 2026, not GBP 1,950",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent)."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Ruth Adeyemi GBP 3,900 (September and October rent)"
+        }
+      ]
+    },
+    {
+      "title": "PM report says repairs spend is on track at 58%; GBP 5,250 of GBP 6,000 is 87.5% with a quarter left",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spend is on track at 58% of the annual budget."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250"
+        }
+      ]
+    },
+    {
+      "title": "PM report says all certificates are in date; the flat 2A EICR expired on 5 June 2026, before the quarter began",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        },
+        {
+          "doc": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        },
+        {
+          "doc": "compliance.csv",
+          "page": 1,
+          "quote": "canal-2a,eicr,2021-06-05,2026-06-05,eicr-canal-2a.pdf,"
+        }
+      ],
+      "register": "compliance"
+    },
+    {
+      "title": "PM report says there are no open remedial items; the flat 5C EICR is Unsatisfactory with an open C2 (no RCD on kitchen sockets), the register says none recorded, and the tenant now reports the sockets tripping",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "There are no open remedial items."
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Overall assessment of the installation: Unsatisfactory"
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "1. Socket circuits in the kitchen have no RCD protection. Code C2."
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Remedial work for C1 or C2 must be done within 28 days of the inspection."
+        },
+        {
+          "doc": "compliance.csv",
+          "page": 1,
+          "quote": "canal-5c,eicr,2024-08-20,2029-08-20,eicr-canal-5c.pdf,none recorded"
+        },
+        {
+          "doc": "inbox.json",
+          "page": 5,
+          "quote": "Every time I use the kettle and the microwave together the kitchen sockets go off. It has happened four times this week."
+        }
+      ],
+      "register": "compliance",
+      "mail": "m14"
+    },
+    {
+      "title": "Flat 2A gas safety record ran out on 13 October 2026 and is now overdue; the compliance register wrongly shows 2027-10-13",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        },
+        {
+          "doc": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        },
+        {
+          "doc": "compliance.csv",
+          "page": 1,
+          "quote": "canal-2a,gas,2025-10-14,2027-10-13,gas-safety-canal-2a.pdf,"
+        },
+        {
+          "doc": "inbox.json",
+          "page": 8,
+          "quote": "our records show flat 2A is past its annual gas safety check."
+        }
+      ],
+      "register": "compliance",
+      "mail": "m17"
+    },
+    {
+      "title": "Flat 2A has no hot water (boiler fault) with a young child in the flat; landlord repair duty and gas check overdue",
+      "evidence": [
+        {
+          "doc": "inbox.json",
+          "page": 3,
+          "quote": "The boiler shows a fault light and there has been no hot water since Saturday. I have a young child at home."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 2,
+          "quote": "The landlord keeps the structure, the heating, the hot water and the"
+        },
+        {
+          "doc": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        }
+      ],
+      "mail": "m12"
+    },
+    {
+      "title": "No gas safety record or EICR held for flat 1A (let) or flat 3A (vacant); no tenancy agreement on file for 1A",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 3,
+          "quote": "Gas central heating with combi boilers."
+        },
+        {
+          "doc": "units.csv",
+          "page": 1,
+          "quote": "canal-1a,22 Canal Street,J. Whitmore,j.whitmore@example.net,1800,month,"
+        },
+        {
+          "doc": "compliance.csv",
+          "page": 1,
+          "quote": "unit,check,last_done,next_due,document,remedial"
+        }
+      ],
+      "register": "compliance"
+    },
+    {
+      "title": "Flat 5C gas fire flagged 'Not to current standards, advised' on the March 2026 gas record",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "There are no open remedial items."
+        },
+        {
+          "doc": "gas-safety-canal-5c.pdf",
+          "page": 1,
+          "quote": "Not to current standards, advised"
+        }
+      ]
+    },
+    {
+      "title": "Offering memorandum overstates unit 4B rent (GBP 52,000 vs GBP 48,100 lease) and total rent (GBP 122,200 vs GBP 118,300); at true rent the 5.32% NIY falls to about 5.15%",
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total contracted rent of GBP 122,200 per year."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "The rent for unit 4B reflects the 2026 rent review."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "Rent is reviewed each year on 1 April in line with CPI, with a floor of 1% and a cap of 4%."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%)."
+        }
+      ]
+    },
+    {
+      "title": "Offering memorandum says unit 4B has no break option; the lease gives a tenant break on 31 March 2029",
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Shop let to Copperleaf Coffee Ltd until 31 March 2031, with no break option."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "31 March 2031 31 March 2029"
+        }
+      ]
+    },
+    {
+      "title": "Offering memorandum says all certificates are current while the buyer's surveyor asks for them; 2A EICR and gas are expired, 5C EICR unsatisfactory, 1A and 3A have none",
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "All gas safety and electrical certificates are current."
+        },
+        {
+          "doc": "inbox.json",
+          "page": 4,
+          "quote": "Please upload the current gas safety records and electrical reports for every flat, and the lease for unit 4B."
+        },
+        {
+          "doc": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        },
+        {
+          "doc": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Overall assessment of the installation: Unsatisfactory"
+        }
+      ],
+      "mail": "m13"
+    },
+    {
+      "title": "Flat 5C tenant has given notice to leave on 31 January 2027; rent roll and OM still show the flat let (GBP 25,200 a year at risk)",
+      "evidence": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic"
+        },
+        {
+          "doc": "inbox.json",
+          "page": 9,
+          "quote": "Please take this as my notice. My last day in flat 5C will be 31 January 2027."
+        },
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 2,
+          "quote": "The deposit is protected with an approved scheme, reference TDP-51977."
+        }
+      ],
+      "mail": "m18"
+    },
+    {
+      "title": "Flat 2A deposit of GBP 2,400 exceeds the five-week cap (GBP 1,950 x 12 / 52 x 5 = GBP 2,250) by GBP 150",
+      "evidence": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 2,
+          "quote": "The tenant pays a deposit of GBP 2,400 on signing."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "This agreement is made on 1 September 2025."
+        }
+      ]
+    },
+    {
+      "title": "Suspected payment fraud: 'Flowfix' bank-detail change comes from flowfix-payments.example, not the registered jobs@flowfix.example",
+      "evidence": [
+        {
+          "doc": "inbox.json",
+          "page": 6,
+          "quote": "Please note our bank details have changed. Pay all open invoices, including FF-2291 for GBP 1,380.00, to IBAN GB11 MOCK 4000 1234 5678 90 from today."
+        },
+        {
+          "doc": "inbox.json",
+          "page": 6,
+          "quote": "Flowfix Plumbing accounts team"
+        },
+        {
+          "doc": "contractors.csv",
+          "page": 1,
+          "quote": "Flowfix Plumbing,plumbing,jobs@flowfix.example,020 7946 0811"
+        }
+      ],
+      "mail": "m15",
+      "register": "contractors"
+    },
+    {
+      "title": "Unit 4B rent review on 1 April 2027: at CPI 3.1% (inside the 1%-4% collar) rent would be about GBP 49,591",
+      "evidence": [
+        {
+          "doc": "inbox.json",
+          "page": 7,
+          "quote": "what will the rent for unit 4B be after the review on 1 April 2027? CPI is running at 3.1%."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "Rent is reviewed each year on 1 April in line with CPI, with a floor of 1% and a cap of 4%."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        }
+      ],
+      "mail": "m16"
+    },
+    {
+      "title": "Flat 3A vacant since 1 May 2026 and a viewing enquiry is waiting; no certificates on file to let it",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Flat 3A has been vacant since 1 May 2026."
+        },
+        {
+          "doc": "inbox.json",
+          "page": 10,
+          "quote": "is flat 3A at 22 Canal Street still available? I would like to view it this week. What is the rent?"
+        }
+      ],
+      "mail": "m19"
+    },
+    {
+      "title": "Noise complaint from flat 1A about the shop's coffee machine at 6am",
+      "evidence": [
+        {
+          "doc": "inbox.json",
+          "page": 12,
+          "quote": "The coffee machine in the shop downstairs starts at 6am and wakes us up. Is that allowed?"
+        }
+      ],
+      "mail": "m21"
+    },
+    {
+      "title": "Allfix invoice AF-7781 is for Millbrook House, not 22 Canal Street; must not be charged to the Canal repairs budget",
+      "evidence": [
+        {
+          "doc": "inbox.json",
+          "page": 11,
+          "quote": "Attached is our invoice AF-7781 for clearing the gutters at Millbrook House: GBP 420.00 plus VAT GBP 84.00, total GBP 504.00."
+        },
+        {
+          "doc": "contractors.csv",
+          "page": 1,
+          "quote": "Allfix Maintenance,general,desk@allfix.example,020 7946 0163"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250"
+        }
+      ],
+      "mail": "m20",
+      "register": "contractors"
+    },
+    {
+      "title": "Millbrook House budget: line items add to GBP 60,070, not the GBP 61,070 total shown",
+      "evidence": [
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Total budget GBP 61,070"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Buildings insurance GBP 14,200"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Cleaning of common parts GBP 6,240"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Lift maintenance GBP 3,600"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Communal electricity GBP 2,880"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Fire alarm and extinguishers GBP 1,950"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Management fee GBP 7,200"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Reserve fund contribution GBP 6,000"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs GBP 18,000"
+        },
+        {
+          "doc": "inbox.json",
+          "page": 1,
+          "quote": "My half-yearly demand looks higher than last year."
+        }
+      ],
+      "mail": "m10"
+    },
+    {
+      "title": "Millbrook House roof works: budget says Section 20 consultation is not required, but GBP 18,000 x 10% = GBP 1,800 per two-bed flat is far above the GBP 250 threshold",
+      "evidence": [
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs: Section 20 consultation is not required for these works."
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs GBP 18,000"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 2,
+          "quote": "Flats 9 to 12 (two bedroom) pay 10% each."
+        },
+        {
+          "doc": "inbox.json",
+          "page": 2,
+          "quote": "Nobody asked us about this. Were we meant to be consulted?"
+        }
+      ],
+      "mail": "m11"
+    }
+  ]
+}

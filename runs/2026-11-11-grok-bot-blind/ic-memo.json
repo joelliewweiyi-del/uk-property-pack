@@ -1,0 +1,638 @@
+{
+  "figures": [
+    {
+      "key": "rent_4b",
+      "value": 48100,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd GBP 12,025 (quarter in advance)",
+          "value": "GBP 12,025",
+          "factor": 4
+        }
+      ]
+    },
+    {
+      "key": "rent_1a",
+      "value": 21600,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+          "value": "GBP 21,600"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore GBP 5,400",
+          "value": "GBP 5,400",
+          "factor": 4
+        }
+      ]
+    },
+    {
+      "key": "rent_2a",
+      "value": 23400,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950",
+          "factor": 12
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic",
+          "value": "GBP 23,400"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi GBP 5,850",
+          "value": "GBP 5,850",
+          "factor": 4
+        }
+      ]
+    },
+    {
+      "key": "rent_5c",
+      "value": 25200,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month, payable on the 1st of each month.",
+          "value": "GBP 2,100",
+          "factor": 12
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic",
+          "value": "GBP 25,200"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer GBP 6,300",
+          "value": "GBP 6,300",
+          "factor": 4
+        }
+      ]
+    },
+    {
+      "key": "total_rent",
+      "value": 118300,
+      "check": "sum",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+          "value": "GBP 21,600"
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950",
+          "factor": 12
+        },
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month, payable on the 1st of each month.",
+          "value": "GBP 2,100",
+          "factor": 12
+        }
+      ]
+    },
+    {
+      "key": "price",
+      "value": 2150000,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000"
+        }
+      ]
+    },
+    {
+      "key": "purchaser_costs",
+      "value": 146200,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000",
+          "factor": 0.068
+        }
+      ]
+    },
+    {
+      "key": "niy",
+      "value": 5.15,
+      "check": "ratio",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300",
+          "value": "GBP 118,300"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000",
+          "factor": 1.068
+        }
+      ]
+    },
+    {
+      "key": "lease_end_4b",
+      "value": "31 March 2031",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The term starts on 1 April 2026 and ends on 31 March 2031.",
+          "value": "31 March 2031"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+          "value": "31 March 2031"
+        }
+      ]
+    },
+    {
+      "key": "break_4b",
+      "value": "31 March 2029",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice.",
+          "value": "31 March 2029"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+          "value": "31 March 2029"
+        }
+      ]
+    },
+    {
+      "key": "next_review_4b",
+      "value": "1 April 2027",
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%).",
+          "value": "1 April 2027"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Prepare the 4B rent review for 1 April 2027.",
+          "value": "1 April 2027"
+        }
+      ]
+    },
+    {
+      "key": "arrears_2a",
+      "value": 3900,
+      "check": "equal",
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Arrears at 1 November 2026 2A Ruth Adeyemi GBP 3,900 (September and October rent)",
+          "value": "GBP 3,900"
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month.",
+          "value": "GBP 1,950",
+          "factor": 2
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "title": "Unit 4B rent overstated in the OM: GBP 52,000 claimed, lease proves GBP 48,100 (GBP 3,900 a year; no 2026 review exists)",
+      "money_gbp": 67899,
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "The rent for unit 4B reflects the 2026 rent review."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The term starts on 1 April 2026 and ends on 31 March 2031."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "Rent is reviewed each year on 1 April in line with CPI, with a floor of 1% and a cap of 4%."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%)."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd GBP 12,025 (quarter in advance)"
+        }
+      ],
+      "register": "units",
+      "register_row": "canal-4b,22 Canal Street,Copperleaf Coffee Ltd,maja@copperleaf.example,48100,year,lease-canal-4b.pdf",
+      "mail": "m16",
+      "mail_quote": "what will the rent for unit 4B be after the review on 1 April 2027? CPI is running at 3.1%."
+    },
+    {
+      "title": "Total rent and yield overstated: OM GBP 122,200 and 5.32% NIY vs GBP 118,300 passing and 5.15% NIY (-0.17 pp; price at OM yield GBP 2,082,101, i.e. GBP 67,899 below asking)",
+      "money_gbp": 67899,
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "- Total contracted rent of GBP 122,200 per year."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "Total contracted rent: GBP 122,200"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract."
+        }
+      ]
+    },
+    {
+      "title": "Flat 5C tenant has served notice to leave on 31 January 2027: GBP 25,200 a year at risk (NIY on remaining let income 4.05%)",
+      "money_gbp": 25200,
+      "evidence": [
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The tenancy starts on 1 March 2026 and runs from month to month."
+        },
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month, payable on the 1st of each month."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic"
+        }
+      ],
+      "mail": "m18",
+      "mail_quote": "Please take this as my notice. My last day in flat 5C will be 31 January 2027."
+    },
+    {
+      "title": "Unit 4B has a tenant break on 31 March 2029; the OM says no break option",
+      "money_gbp": 48100,
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "- Shop let to Copperleaf Coffee Ltd until 31 March 2031, with no break option."
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice."
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029"
+        }
+      ]
+    },
+    {
+      "title": "Flat 2A arrears GBP 3,900 at 1 November 2026; PM report claims 100% collection while showing GBP 27,625 of GBP 29,575 collected (93.41%)",
+      "money_gbp": 3900,
+      "evidence": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Arrears at 1 November 2026 2A Ruth Adeyemi GBP 3,900 (September and October rent)"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "All other tenants are up to date."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent)."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month."
+        }
+      ]
+    },
+    {
+      "title": "Flat 2A gas safety record expired 13 October 2026; compliance register shows 2027-10-13; OM and PM report say all certificates current",
+      "money_gbp": null,
+      "evidence": [
+        {
+          "doc": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next safety check due by: 13 October 2026"
+        },
+        {
+          "doc": "gas-safety-canal-2a.pdf",
+          "page": 1,
+          "quote": "Date of inspection: 14 October 2025"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "- All gas safety and electrical certificates are current."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        }
+      ],
+      "register": "compliance",
+      "register_row": "canal-2a,gas,2025-10-14,2027-10-13,gas-safety-canal-2a.pdf,",
+      "mail": "m17",
+      "mail_quote": "our records show flat 2A is past its annual gas safety check."
+    },
+    {
+      "title": "Flat 2A EICR expired 5 June 2026",
+      "money_gbp": null,
+      "evidence": [
+        {
+          "doc": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "- All gas safety and electrical certificates are current."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        }
+      ],
+      "register": "compliance",
+      "register_row": "canal-2a,eicr,2021-06-05,2026-06-05,eicr-canal-2a.pdf,"
+    },
+    {
+      "title": "Flat 5C EICR unsatisfactory with an open C2 (no RCD on kitchen sockets); register says no remedial; tenant reports sockets tripping",
+      "money_gbp": null,
+      "evidence": [
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Overall assessment of the installation: Unsatisfactory"
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "1. Socket circuits in the kitchen have no RCD protection. Code C2."
+        },
+        {
+          "doc": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Remedial work for C1 or C2 must be done within 28 days of the inspection."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "There are no open remedial items."
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "- All gas safety and electrical certificates are current."
+        }
+      ],
+      "register": "compliance",
+      "register_row": "canal-5c,eicr,2024-08-20,2029-08-20,eicr-canal-5c.pdf,none recorded",
+      "mail": "m14",
+      "mail_quote": "Every time I use the kettle and the microwave together the kitchen sockets go off."
+    },
+    {
+      "title": "Flat 5C gas fire not to current standards (advisory) vs no open remedial items",
+      "money_gbp": null,
+      "evidence": [
+        {
+          "doc": "gas-safety-canal-5c.pdf",
+          "page": 1,
+          "quote": "Gas fire Lounge Not to current standards, advised"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "There are no open remedial items."
+        }
+      ]
+    },
+    {
+      "title": "Flat 2A: no hot water reported (landlord repair duty); deposit GBP 2,400 above the 5-week cap of GBP 2,250 on GBP 23,400 a year",
+      "money_gbp": 150,
+      "evidence": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 2,
+          "quote": "The landlord keeps the structure, the heating, the hot water and the electrical installation in repair."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 2,
+          "quote": "The tenant pays a deposit of GBP 2,400 on signing."
+        },
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month, payable on the 1st of each month."
+        }
+      ],
+      "mail": "m12",
+      "mail_quote": "The boiler shows a fault light and there has been no hot water since Saturday."
+    },
+    {
+      "title": "Repairs spend described as on track at 58% of budget; the figures give 87.5% after nine months",
+      "money_gbp": 750,
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spend is on track at 58% of the annual budget."
+        }
+      ]
+    },
+    {
+      "title": "Unit 1A: no tenancy agreement in the data room; GBP 21,600 rests on the rent roll, PM report and register only",
+      "money_gbp": 21600,
+      "evidence": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore GBP 5,400"
+        }
+      ],
+      "register": "units",
+      "register_row": "canal-1a,22 Canal Street,J. Whitmore,j.whitmore@example.net,1800,month,"
+    },
+    {
+      "title": "Suspected payment-diversion email: Flowfix 'new bank details' from a domain that is not in the contractor register",
+      "money_gbp": 1380,
+      "evidence": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "Rent is paid by bank transfer to the account the landlord names in writing."
+        }
+      ],
+      "mail": "m15",
+      "mail_quote": "Pay all open invoices, including FF-2291 for GBP 1,380.00, to IBAN GB11 MOCK 4000 1234 5678 90 from today.",
+      "register": "contractors",
+      "register_row": "Flowfix Plumbing,plumbing,jobs@flowfix.example,020 7946 0811"
+    },
+    {
+      "title": "Millbrook House papers are in the 22 Canal Street data room (another building); its budget says no Section 20 consultation for GBP 18,000 roof works",
+      "money_gbp": null,
+      "evidence": [
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs GBP 18,000"
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 1,
+          "quote": "Roof repairs: Section 20 consultation is not required for these works."
+        },
+        {
+          "doc": "service-charge-millbrook-2026.pdf",
+          "page": 2,
+          "quote": "Flats 1 to 8 (one bedroom) pay 7.5% each."
+        }
+      ],
+      "mail": "m11",
+      "mail_quote": "I see GBP 18,000 for roof repairs in the budget. Nobody asked us about this."
+    }
+  ]
+}

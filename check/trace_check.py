@@ -54,7 +54,8 @@ class Docs:
     def pages(self, name):
         if name not in self.cache:
             base = Path(name).stem
-            for candidate in (self.root / "text" / base, self.root / name, self.root / "pdf" / name):
+            for candidate in (self.root / "text" / base, self.root / name, self.root / "pdf" / name,
+                              self.root / "registers" / name, self.root / "mail" / name):
                 if candidate.exists():
                     self.cache[name] = read_pages(candidate)
                     break

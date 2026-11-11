@@ -72,7 +72,7 @@ figures 12/12 right and traced, issues 0/9 caught, 0 rejected
 
 The example outputs hold figures only, so they catch no issues. Add `findings` in the format of `score.py`.
 
-For a blind run, give the agent a folder with only `pdf/`, `registers/`, `mail/` and the two quote checkers, the brief's task and its figure keys and labels, never `briefs.json`, `truth.json` or `examples/`. Then score its output here.
+For a blind run, give the agent a folder with only `pdf/`, `registers/`, `mail/` and the two quote checkers, the brief's task and its figure keys and labels, never `briefs.json`, `truth.json` or `examples/`. Then score its output here. A register is cited as one page (`{"doc": "compliance.csv", "page": 1}`), a mail as `inbox.json` with its position in the file as the page.
 
 ## The planted issues
 

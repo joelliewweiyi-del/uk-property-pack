@@ -25,6 +25,10 @@ def read_pages(source):
     if p.is_dir():
         files = sorted(p.glob("p*.txt"), key=lambda f: int(f.stem[1:]))
         return [f.read_text(encoding="utf-8") for f in files]
+    if p.suffix == ".csv":  # a register is one page
+        return [p.read_text(encoding="utf-8")]
+    if p.suffix == ".json":  # a mailbox: one page per mail, in file order
+        return ["\n".join(str(v) for v in m.values()) for m in json.loads(p.read_text(encoding="utf-8"))]
     text = subprocess.run(["pdftotext", "-layout", str(p), "-"], capture_output=True, text=True, encoding="utf-8", check=True).stdout
     pages = text.split("\f")
     return pages[:-1] if pages and not pages[-1].strip() else pages
