@@ -11,16 +11,17 @@ When to use it: someone gives me a memo, an investment memorandum, a rent roll o
 Inputs: the document to check (the target) and the source documents (leases, tenancies, rent roll, certificates, budgets). If I only give a data room, ask which document is the target.
 
 Steps:
-1. Make sure the checkers are on the computer: download the folder `check` from https://github.com/joelliewweiyi-del/uk-property-pack (`check_quotes.py`, `trace_check.py`, `score.py`, in one folder). They need Python 3 and `pdftotext` (install poppler-utils if it is missing). Put all PDFs in one folder.
+1. Make sure the checkers are on the computer: download the folder `check` from https://github.com/joelliewweiyi-del/uk-property-pack (`check_quotes.py`, `trace_check.py`, `score.py`, in one folder). They need Python 3 and `pdftotext` (install poppler-utils if it is missing). Put all PDFs in one folder. Read every other folder of the data room too: registers (CSV) and mail (JSON) are sources as well.
 2. Go through the target page by page. List every figure: amounts, rents, totals, percentages, yields, dates, areas, and claims such as "no break option" or "all certificates are current".
 3. For each figure, find the source that should prove it. Write a claim: `id`, `check`, `claim` and `sources`. The claim and every source are `{"doc", "page", "quote", "value"}`, with the quote copied character for character from that page and the value inside the quote.
    - `check: "equal"` when the source should say the same. Add `"factor": 12` to a source that gives a monthly figure for a yearly one, `0.25` for a quarter.
    - `check: "sum"` for a total, with every line it adds up as a source.
    - `check: "ratio"` for a percentage: source 1 divided by source 2. A yield takes the rent and the price, with the purchaser costs as a factor on the price (6.8% costs is factor 1.068).
    - No source in the documents: leave `sources` empty. Never invent one.
+   - Only amounts, percentages and dates go into `claims.json`. A claim in words ("no break option", "all certificates are current", "four flats") is no claim for the checker: when a source contradicts it, it goes straight into `findings.json` with both quotes.
 4. Save the claims as `claims.json` and run `python3 check/trace_check.py <pdf folder> claims.json`.
 5. A line marked `!` means a quote is wrong. Go back to the page and fix the quote. Never edit a quote to make it pass. Run again until there is no `!`.
-6. Every `✗` and every claim the sources contradict in words (a break the memo leaves out, a certificate that is overdue) is a finding. Write `findings.json`: `{"findings": [{"title", "evidence": [{"doc", "page", "quote"}]}]}`, with the quotes on both sides.
+6. Every `✗` and every claim the sources contradict in words (a break the memo leaves out, a certificate that is overdue) is a finding. Write `findings.json`: `{"findings": [{"title", "evidence": [{"doc", "page", "quote"}]}]}`, with the quotes on both sides. A finding that rests on a mail or a register row also names it: `"mail": "<id>"` or `"register": "<file name without .csv>"`.
 7. If the documents come from the uk-property-pack, also run `python3 check/score.py <pack folder> findings.json` and report the score.
 
 What to return:
