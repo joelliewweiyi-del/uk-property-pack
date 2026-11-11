@@ -12,7 +12,7 @@
         { "key": "rent_5c", "label": "Flat 5C rent per year", "value": "GBP 25,200" },
         { "key": "total_rent", "label": "Total passing rent", "value": "GBP 118,300" },
         { "key": "price", "label": "Asking price", "value": "GBP 2,150,000" },
-        { "key": "purchaser_costs", "label": "Purchaser costs", "value": "6.8%" },
+        { "key": "purchaser_costs", "label": "Purchaser costs, as a percentage of the price", "value": "6.8%" },
         { "key": "niy", "label": "Net initial yield on passing rent, after costs", "value": "5.15%" },
         { "key": "lease_end_4b", "label": "Unit 4B lease end", "value": "31 March 2031" },
         { "key": "break_4b", "label": "Unit 4B tenant break", "value": "31 March 2029" },

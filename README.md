@@ -72,6 +72,8 @@ figures 12/12 right and traced, issues 0/9 caught, 0 rejected
 
 The example outputs hold figures only, so they catch no issues. Add `findings` in the format of `score.py`.
 
+For a blind run, give the agent a folder with only `pdf/`, `registers/`, `mail/` and the two quote checkers, the brief's task and its figure keys and labels, never `briefs.json`, `truth.json` or `examples/`. Then score its output here.
+
 ## The planted issues
 
 Spoilers. Fifteen problems are planted across the documents, mail and registers: an offering memorandum that overstates rent and income security, a quarterly report that claims full rent collection and an on-track repairs budget when neither is true, and says every certificate is in date, overdue gas and electrical checks, an open C2 electrical defect, a deposit above the legal cap, a service charge budget that doesn't add up, works that need a Section 20 consultation, a typo in the compliance register, and a bank-detail change from a look-alike domain. `truth.json` lists each one with the quotes that prove it.
