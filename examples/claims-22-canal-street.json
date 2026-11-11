@@ -1,0 +1,266 @@
+{
+  "_note": "Example claims for check/trace_check.py: what an agent hands over, before the code compares the values.",
+  "claims": [
+    {
+      "id": "rent_4b",
+      "check": "equal",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 2,
+        "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031",
+        "value": "GBP 52,000"
+      },
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+          "value": "GBP 48,100"
+        }
+      ]
+    },
+    {
+      "id": "rent_2a",
+      "check": "equal",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 2,
+        "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic",
+        "value": "GBP 23,400"
+      },
+      "sources": [
+        {
+          "doc": "tenancy-canal-2a.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 1,950 per month",
+          "value": "GBP 1,950",
+          "factor": 12
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic",
+          "value": "GBP 23,400"
+        }
+      ]
+    },
+    {
+      "id": "rent_5c",
+      "check": "equal",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 2,
+        "quote": "5C Leo Fischer Residential GBP 25,200 Periodic",
+        "value": "GBP 25,200"
+      },
+      "sources": [
+        {
+          "doc": "tenancy-canal-5c.pdf",
+          "page": 1,
+          "quote": "The rent is GBP 2,100 per month",
+          "value": "GBP 2,100",
+          "factor": 12
+        }
+      ]
+    },
+    {
+      "id": "rent_1a",
+      "check": "equal",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 2,
+        "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+        "value": "GBP 21,600"
+      },
+      "sources": []
+    },
+    {
+      "id": "total_rent",
+      "check": "sum",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 2,
+        "quote": "Total contracted rent: GBP 122,200",
+        "value": "GBP 122,200"
+      },
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+          "value": "GBP 48,100"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic",
+          "value": "GBP 21,600"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic",
+          "value": "GBP 23,400"
+        },
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic",
+          "value": "GBP 25,200"
+        }
+      ]
+    },
+    {
+      "id": "niy",
+      "check": "ratio",
+      "claim": {
+        "doc": "om-22-canal-street.pdf",
+        "page": 1,
+        "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%.",
+        "value": "5.32%"
+      },
+      "sources": [
+        {
+          "doc": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300",
+          "value": "GBP 118,300"
+        },
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Offers are invited for the freehold at GBP 2,150,000, subject to contract.",
+          "value": "GBP 2,150,000",
+          "factor": 1.068
+        }
+      ]
+    },
+    {
+      "id": "break_4b",
+      "check": "equal",
+      "claim": {
+        "doc": "rent-roll-22-canal-street.pdf",
+        "page": 1,
+        "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029",
+        "value": "31 March 2029"
+      },
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "The tenant may break the lease on 31 March 2029 with six months notice.",
+          "value": "31 March 2029"
+        }
+      ]
+    },
+    {
+      "id": "pm_demanded",
+      "check": "sum",
+      "claim": {
+        "doc": "pm-report-22-canal-street-q3-2026.pdf",
+        "page": 1,
+        "quote": "Rent demanded in the quarter: GBP 29,575",
+        "value": "GBP 29,575"
+      },
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd GBP 12,025 (quarter in advance)",
+          "value": "GBP 12,025"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "1A J. Whitmore GBP 5,400",
+          "value": "GBP 5,400"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "2A Ruth Adeyemi GBP 5,850",
+          "value": "GBP 5,850"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "5C Leo Fischer GBP 6,300",
+          "value": "GBP 6,300"
+        }
+      ]
+    },
+    {
+      "id": "pm_demanded_4b",
+      "check": "equal",
+      "claim": {
+        "doc": "pm-report-22-canal-street-q3-2026.pdf",
+        "page": 1,
+        "quote": "4B Copperleaf Coffee Ltd GBP 12,025 (quarter in advance)",
+        "value": "GBP 12,025"
+      },
+      "sources": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance.",
+          "value": "GBP 48,100",
+          "factor": 0.25
+        }
+      ]
+    },
+    {
+      "id": "pm_collection",
+      "check": "ratio",
+      "claim": {
+        "doc": "pm-report-22-canal-street-q3-2026.pdf",
+        "page": 1,
+        "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded.",
+        "value": "100%"
+      },
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded.",
+          "value": "GBP 27,625"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575",
+          "value": "GBP 29,575"
+        }
+      ]
+    },
+    {
+      "id": "pm_repairs_pct",
+      "check": "ratio",
+      "claim": {
+        "doc": "pm-report-22-canal-street-q3-2026.pdf",
+        "page": 2,
+        "quote": "Spend is on track at 58% of the annual budget.",
+        "value": "58%"
+      },
+      "sources": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250",
+          "value": "GBP 5,250"
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000",
+          "value": "GBP 6,000"
+        }
+      ]
+    }
+  ]
+}

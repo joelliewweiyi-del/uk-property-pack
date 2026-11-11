@@ -1,0 +1,19 @@
+RENT ROLL
+22 Canal Street, London E2 8QR
+
+As at 1 November 2026. Prepared by Kestrel Property Management for the vendor.
+
+Unit   Tenant                  Type          Rent per year   Lease end        Break
+4B     Copperleaf Coffee Ltd   Commercial    GBP 48,100      31 March 2031    31 March 2029
+1A     J. Whitmore             Residential   GBP 21,600      Periodic         -
+2A     Ruth Adeyemi            Residential   GBP 23,400      Periodic         -
+3A     Vacant                  Residential   -               -                -
+5C     Leo Fischer             Residential   GBP 25,200      Periodic         -
+
+Total passing rent: GBP 118,300
+
+Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%).
+
+Arrears at 1 November 2026
+2A     Ruth Adeyemi            GBP 3,900 (September and October rent)
+All other tenants are up to date.

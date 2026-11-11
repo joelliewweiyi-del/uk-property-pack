@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -86,4 +86,63 @@ test('the OM yield follows from its own rent, and drops with the lease rent', ()
   const lease = num(DOCS['lease-canal-4b.pdf'].fields.find((f) => f.key === 'annual_rent').value);
   assert.equal(niy(num(om('total_rent'))), num(om('niy')));
   assert.equal(niy(num(om('total_rent')) - num(om('rent_4b')) + lease), 5.15);
+});
+
+const run = (script, file) => spawnSync(python, [join(root, 'check', script), root, file], { encoding: 'utf8' });
+const tmpJson = (data) => {
+  const file = join(tmp, `j${Math.random()}.json`);
+  writeFileSync(file, JSON.stringify(data));
+  return file;
+};
+const claimsFile = join(root, 'examples', 'claims-22-canal-street.json');
+
+test('the trace check finds the memo and report mismatches and ties the rest', () => {
+  const r = run('trace_check.py', claimsFile);
+  assert.equal(r.status, 0, r.stdout + r.stderr);
+  for (const line of ['✗ rent_4b', '✓ rent_2a', '✗ total_rent', '✗ niy', '✓ pm_demanded ', '✗ pm_collection', '✗ pm_repairs_pct', '? rent_1a']) {
+    assert.ok(r.stdout.includes(line), `missing "${line}"\n${r.stdout}`);
+  }
+  assert.match(r.stdout, /11 claims: 5 tie, 5 mismatch, 1 no source, 0 rejected/);
+});
+
+test('the trace check rejects a source quote that is not in the document', () => {
+  const data = JSON.parse(readFileSync(claimsFile, 'utf8'));
+  data.claims[0].sources[0].quote = 'The annual rent is GBP 52,000, payable quarterly in advance.';
+  data.claims[0].sources[0].value = 'GBP 52,000';
+  const r = run('trace_check.py', tmpJson(data));
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /! rent_4b .*quote not found on page 2/);
+});
+
+test('the scorer gives the answer key full marks and the sample 3', () => {
+  const { issues } = JSON.parse(readFileSync(join(root, 'truth.json'), 'utf8'));
+  const key = issues.map((i) => ({
+    title: i.title,
+    mail: i.mail,
+    register: i.register,
+    evidence: i.evidence.map((e) => ({ doc: e.document, page: e.page, quote: e.quote })),
+  }));
+  assert.match(run('score.py', tmpJson({ findings: key })).stdout, new RegExp(`caught ${issues.length}/${issues.length}, 0 unmatched`));
+  assert.match(run('score.py', join(root, 'examples', 'findings-sample.json')).stdout, /caught 3\/15, 1 unmatched, 0 rejected/);
+});
+
+test('the scorer rejects an invented quote and does not count a one-word quote', () => {
+  const om = 'om-22-canal-street.pdf';
+  const fake = run('score.py', tmpJson({ findings: [{ title: 'x', evidence: [{ doc: om, page: 2, quote: 'Unit 4B rent is GBP 48,100' }] }] }));
+  assert.equal(fake.status, 1);
+  assert.match(fake.stdout, /caught 0\/15, 0 unmatched, 1 rejected/);
+  const short = run('score.py', tmpJson({ findings: [{ title: 'x', evidence: [{ doc: om, page: 2, quote: 'GBP' }, { doc: 'lease-canal-4b.pdf', page: 2, quote: 'GBP' }] }] }));
+  assert.match(short.stdout, /caught 0\/15, 1 unmatched/);
+});
+
+test('the rent roll agrees with the leases; the quarterly report percentages stay wrong', () => {
+  const field = (doc, key) => DOCS[doc].fields.find((f) => f.key === key).value;
+  const num = (s) => Number(s.replace(/[^\d.]/g, ''));
+  const rr = 'rent-roll-22-canal-street.pdf';
+  const pm = 'pm-report-22-canal-street-q3-2026.pdf';
+  assert.equal(['rent_4b', 'rent_1a', 'rent_2a', 'rent_5c'].reduce((s, k) => s + num(field(rr, k)), 0), num(field(rr, 'total_rent')));
+  assert.equal(num(field(rr, 'rent_4b')), num(field('lease-canal-4b.pdf', 'annual_rent')));
+  assert.notEqual(Math.round((num(field(pm, 'collected')) / num(field(pm, 'demanded'))) * 100), num(field(pm, 'collection_rate')));
+  assert.notEqual(Math.round((num(field(pm, 'repairs_spent')) / num(field(pm, 'repairs_budget'))) * 100), num(field(pm, 'repairs_pct')));
+  assert.equal(num(field(pm, 'demanded')) - num(field(pm, 'collected')), num(field(pm, 'arrears')));
 });

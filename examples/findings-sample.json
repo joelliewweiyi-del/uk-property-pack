@@ -1,0 +1,50 @@
+{
+  "_note": "Example findings for check/score.py: three catch a planted issue, one is a true fact that is not an issue.",
+  "findings": [
+    {
+      "title": "Memo overstates unit 4B rent",
+      "evidence": [
+        {
+          "doc": "om-22-canal-street.pdf",
+          "page": 2,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 52,000 31 March 2031"
+        },
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 2,
+          "quote": "The annual rent is GBP 48,100, payable quarterly in advance."
+        }
+      ]
+    },
+    {
+      "title": "Report claims full collection",
+      "evidence": [
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "doc": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575"
+        }
+      ]
+    },
+    {
+      "title": "Bank detail change from a look-alike domain",
+      "mail": "m15",
+      "evidence": []
+    },
+    {
+      "title": "Shop is a coffee shop",
+      "evidence": [
+        {
+          "doc": "lease-canal-4b.pdf",
+          "page": 1,
+          "quote": "Tenant: Copperleaf Coffee Ltd"
+        }
+      ]
+    }
+  ]
+}

@@ -259,6 +259,144 @@
         }
       ]
     },
+    "rent-roll-22-canal-street.pdf": {
+      "title": "Rent roll, 22 Canal Street",
+      "pages": 1,
+      "fields": [
+        {
+          "key": "as_at",
+          "page": 1,
+          "value": "1 November 2026",
+          "quote": "As at 1 November 2026."
+        },
+        {
+          "key": "rent_4b",
+          "page": 1,
+          "value": "GBP 48,100",
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029"
+        },
+        {
+          "key": "break_4b",
+          "page": 1,
+          "value": "31 March 2029",
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029"
+        },
+        {
+          "key": "rent_1a",
+          "page": 1,
+          "value": "GBP 21,600",
+          "quote": "1A J. Whitmore Residential GBP 21,600 Periodic"
+        },
+        {
+          "key": "rent_2a",
+          "page": 1,
+          "value": "GBP 23,400",
+          "quote": "2A Ruth Adeyemi Residential GBP 23,400 Periodic"
+        },
+        {
+          "key": "rent_5c",
+          "page": 1,
+          "value": "GBP 25,200",
+          "quote": "5C Leo Fischer Residential GBP 25,200 Periodic"
+        },
+        {
+          "key": "total_rent",
+          "page": 1,
+          "value": "GBP 118,300",
+          "quote": "Total passing rent: GBP 118,300"
+        },
+        {
+          "key": "review_4b",
+          "page": 1,
+          "value": "1 April 2027",
+          "quote": "Next rent review, unit 4B: 1 April 2027 (CPI, floor 1%, cap 4%)."
+        },
+        {
+          "key": "arrears_2a",
+          "page": 1,
+          "value": "GBP 3,900",
+          "quote": "2A Ruth Adeyemi GBP 3,900 (September and October rent)"
+        }
+      ]
+    },
+    "pm-report-22-canal-street-q3-2026.pdf": {
+      "title": "Quarterly property report Q3 2026, 22 Canal Street",
+      "pages": 2,
+      "fields": [
+        {
+          "key": "quarter",
+          "page": 1,
+          "value": "1 July to 30 September 2026",
+          "quote": "Quarter: 1 July to 30 September 2026"
+        },
+        {
+          "key": "demanded",
+          "page": 1,
+          "value": "GBP 29,575",
+          "quote": "Rent demanded in the quarter: GBP 29,575"
+        },
+        {
+          "key": "collected",
+          "page": 1,
+          "value": "GBP 27,625",
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "key": "collection_rate",
+          "page": 1,
+          "value": "100%",
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "key": "arrears",
+          "page": 1,
+          "value": "GBP 1,950",
+          "quote": "Arrears at 30 September 2026: GBP 1,950 (flat 2A, September rent)."
+        },
+        {
+          "key": "demanded_4b",
+          "page": 1,
+          "value": "GBP 12,025",
+          "quote": "4B Copperleaf Coffee Ltd GBP 12,025 (quarter in advance)"
+        },
+        {
+          "key": "demanded_1a",
+          "page": 1,
+          "value": "GBP 5,400",
+          "quote": "1A J. Whitmore GBP 5,400"
+        },
+        {
+          "key": "demanded_2a",
+          "page": 1,
+          "value": "GBP 5,850",
+          "quote": "2A Ruth Adeyemi GBP 5,850"
+        },
+        {
+          "key": "demanded_5c",
+          "page": 1,
+          "value": "GBP 6,300",
+          "quote": "5C Leo Fischer GBP 6,300"
+        },
+        {
+          "key": "repairs_budget",
+          "page": 2,
+          "value": "GBP 6,000",
+          "quote": "Annual budget 2026: GBP 6,000"
+        },
+        {
+          "key": "repairs_spent",
+          "page": 2,
+          "value": "GBP 5,250",
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250"
+        },
+        {
+          "key": "repairs_pct",
+          "page": 2,
+          "value": "58%",
+          "quote": "Spend is on track at 58% of the annual budget."
+        }
+      ]
+    },
     "service-charge-millbrook-2026.pdf": {
       "title": "Service charge budget 2026, Millbrook House",
       "pages": 2,
@@ -310,6 +448,11 @@
           "document": "lease-canal-4b.pdf",
           "page": 1,
           "quote": "The term starts on 1 April 2026"
+        },
+        {
+          "document": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "4B Copperleaf Coffee Ltd Commercial GBP 48,100 31 March 2031 31 March 2029"
         }
       ]
     },
@@ -344,6 +487,11 @@
           "document": "om-22-canal-street.pdf",
           "page": 1,
           "quote": "This reflects a net initial yield of 5.32% after purchaser costs of 6.8%."
+        },
+        {
+          "document": "rent-roll-22-canal-street.pdf",
+          "page": 1,
+          "quote": "Total passing rent: GBP 118,300"
         }
       ]
     },
@@ -460,6 +608,7 @@
       "id": "register-gas-2a",
       "title": "The compliance register shows flat 2A gas due 13 October 2027; the record says 2026.",
       "why": "A typo in the register hides an overdue check.",
+      "register": "compliance",
       "evidence": [
         {
           "document": "gas-safety-canal-2a.pdf",
@@ -472,7 +621,79 @@
       "id": "mail-bank-change",
       "title": "Mail m15 asks to change a contractor's bank details from a look-alike domain.",
       "why": "flowfix-payments.example is not the registered flowfix.example. Treat it as fraud until confirmed by phone.",
+      "mail": "m15",
       "evidence": []
+    },
+    {
+      "id": "pm-collection-rate",
+      "title": "The quarterly report says 100% of rent was collected; GBP 27,625 of GBP 29,575 is 93.4%.",
+      "why": "27,625 / 29,575 = 93.4%. The same page shows GBP 1,950 of arrears.",
+      "evidence": [
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent collected in the quarter: GBP 27,625, which is 100% of rent demanded."
+        },
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Rent demanded in the quarter: GBP 29,575"
+        },
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 1,
+          "quote": "Arrears at 30 September 2026: GBP 1,950"
+        }
+      ]
+    },
+    {
+      "id": "pm-compliance",
+      "title": "The quarterly report says every electrical report is in date with nothing open; flat 2A was overdue from 5 June 2026 and flat 5C has an open C2.",
+      "why": "At 30 September 2026 the 2A report was almost four months overdue, and the 5C C2 had been open since 20 August 2024.",
+      "evidence": [
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "All gas safety records and electrical reports are in date."
+        },
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "There are no open remedial items."
+        },
+        {
+          "document": "eicr-canal-2a.pdf",
+          "page": 1,
+          "quote": "Next inspection recommended by: 5 June 2026"
+        },
+        {
+          "document": "eicr-canal-5c.pdf",
+          "page": 1,
+          "quote": "Socket circuits in the kitchen have no RCD protection. Code C2."
+        }
+      ]
+    },
+    {
+      "id": "pm-repairs-budget",
+      "title": "The quarterly report says repairs spend is on track at 58% of budget; GBP 5,250 of GBP 6,000 is 87.5%.",
+      "why": "5,250 / 6,000 = 87.5% after nine months, which is 75% of the year. Spend runs ahead of budget.",
+      "evidence": [
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spend is on track at 58% of the annual budget."
+        },
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Annual budget 2026: GBP 6,000"
+        },
+        {
+          "document": "pm-report-22-canal-street-q3-2026.pdf",
+          "page": 2,
+          "quote": "Spent 1 January to 30 September 2026: GBP 5,250"
+        }
+      ]
     }
   ]
 }
