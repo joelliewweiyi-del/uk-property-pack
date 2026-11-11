@@ -25,7 +25,7 @@ def read_pages(source):
     if p.is_dir():
         files = sorted(p.glob("p*.txt"), key=lambda f: int(f.stem[1:]))
         return [f.read_text(encoding="utf-8") for f in files]
-    text = subprocess.run(["pdftotext", "-layout", str(p), "-"], capture_output=True, text=True, check=True).stdout
+    text = subprocess.run(["pdftotext", "-layout", str(p), "-"], capture_output=True, text=True, encoding="utf-8", check=True).stdout
     pages = text.split("\f")
     return pages[:-1] if pages and not pages[-1].strip() else pages
 
@@ -48,6 +48,7 @@ def verify(pages, field):
 
 
 def main(argv):
+    sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252, which has no ✓ or ✗
     if len(argv) != 3:
         print(__doc__.strip(), file=sys.stderr)
         return 2

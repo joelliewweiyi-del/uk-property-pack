@@ -4,10 +4,12 @@ import { spawnSync } from 'node:child_process';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { DOCS, ISSUES } from '../src/docs.js';
 import { problems } from '../src/verify.js';
 
-const root = new URL('../', import.meta.url).pathname;
+const root = fileURLToPath(new URL('../', import.meta.url));
+const python = process.platform === 'win32' ? 'python' : 'python3';
 const checker = join(root, 'check/check_quotes.py');
 const hasPdftotext = spawnSync('pdftotext', ['-v']).error === undefined;
 const tmp = mkdtempSync(join(tmpdir(), 'pack-'));
@@ -15,7 +17,7 @@ const tmp = mkdtempSync(join(tmpdir(), 'pack-'));
 function check(source, fields) {
   const file = join(tmp, `x${Math.random()}.json`);
   writeFileSync(file, JSON.stringify(fields));
-  return spawnSync('python3', [checker, source, file], { encoding: 'utf8' });
+  return spawnSync(python, [checker, source, file], { encoding: 'utf8' });
 }
 
 test('every field and every issue quote is on the page it names', () => {
@@ -43,7 +45,7 @@ test('the checker traces every truth field, from the PDF', { skip: !hasPdftotext
 });
 
 test('the checker rejects an invented value, a wrong page and a missing value', () => {
-  const lease = join(root, 'text/lease-canal-4b');
+  const lease = join(root, 'text', 'lease-canal-4b');
   const rent = DOCS['lease-canal-4b.pdf'].fields.find((f) => f.key === 'annual_rent');
   const cases = [
     [{ ...rent, value: 'GBP 52,000' }, 'value is not in the quote'],
